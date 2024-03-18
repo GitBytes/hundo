@@ -311,7 +311,7 @@ rule download_reference_data:
     output:
         "%s/{filename}" % config.get("database_dir", ".")
     run:
-        shell("curl 'https://zenodo.org/record/1043977/files/{wildcards.filename}' -s > {output}")
+        shell("curl 'https://zenodo.org/records/1043977/files/{wildcards.filename}' -s > {output}")
         if not REFERENCES[os.path.basename(output[0])] == md5(output[0]):
             raise OSError(2, "Invalid checksum", output[0])
 
