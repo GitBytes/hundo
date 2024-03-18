@@ -9,7 +9,7 @@ dependencies:
     - biom-format=2.1.7
     - biopython=1.74
     - blast=2.9.0
-    - bzip2=1.0.6
+    - bzip2>1.0.6
     - click=6.7
     - docutils=0.14
     - mafft=7.313
